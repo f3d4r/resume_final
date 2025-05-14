@@ -1,32 +1,32 @@
-name: Deploy Hugo site to GitHub Pages
-
+name: Deploy Hugo site to GitHub Pages # Название workflow
+# Запускает деплой каждый раз, когда происходит push в ветку main
 on:
   push:
     branches:
-      - main
-
+      - main 
+# Создаёт задачу build-deploy, которая запускается на виртуальной машине с Ubuntu
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout source
+      - name: Checkout source # Клонирует репозиторий в GitHub Actions Runner
         uses: actions/checkout@v3
 
-      - name: Setup Hugo
+      - name: Setup Hugo 
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.146.1'
           extended: true
 
-      - name: Build site
-        run: hugo --minify --baseURL="https://f3d4r.github.io/resume_final/" --cleanDestinationDir
+      - name: Build site 
+        run: hugo --minify #  сжимает HTML/CSS/JS
 
-      - name: Add .nojekyll
+      - name: Add .nojekyll # Отключает Jekyll на GitHub Pages
         run: touch public/.nojekyll
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages # Загружает содержимое папки public/ (собранный сайт) в ветку gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }} # автоматический токен, дающий Actions право пушить
           publish_dir: ./public
           publish_branch: gh-pages
