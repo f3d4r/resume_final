@@ -17,7 +17,10 @@ jobs:
         with:
           hugo-version: '0.146.1'
           extended: true
-          
+
+      - name: Clean public folder
+        run: rm -rf public
+
       - name: Build site
         run: hugo --minify
 
