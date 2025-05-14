@@ -19,7 +19,7 @@ jobs:
           extended: true
 
       - name: Build site
-        run: hugo --minify
+        run: hugo --minify --baseURL="https://f3d4r.github.io/resume_final/" --cleanDestinationDir
 
       - name: Add .nojekyll
         run: touch public/.nojekyll
