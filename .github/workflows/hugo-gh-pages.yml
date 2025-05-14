@@ -19,7 +19,7 @@ jobs:
           extended: true
 
       - name: Build site 
-        run: hugo --minify #  сжимает HTML/CSS/JS
+        run: hugo --minify #  Сжимает HTML/CSS/JS
 
       - name: Add .nojekyll # Отключает Jekyll на GitHub Pages
         run: touch public/.nojekyll
