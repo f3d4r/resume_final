@@ -2,3 +2,5 @@ baseURL = 'https://f3d4r.github.io/resume_final/'
 languageCode = 'en-us'
 title = 'Hugo Site'
 theme = "hugo-resume"
+relativeURLs = true
+canonifyURLs = true
