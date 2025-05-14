@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://f3d4r.github.io/OVOS_lab3/'
 languageCode = 'en-us'
 title = 'Hugo Site'
 theme = "hugo-resume"
