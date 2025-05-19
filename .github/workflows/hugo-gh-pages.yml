@@ -9,8 +9,8 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout source # Клонирует репозиторий в GitHub Actions Runner
-        uses: actions/checkout@v3
+      - name: Checkout source # GitHub Actions Runner
+        uses: actions/checkout@v3 # Клонирует содержимое репозитория внутрь контейнера для работы
 
       - name: Setup Hugo 
         uses: peaceiris/actions-hugo@v2
