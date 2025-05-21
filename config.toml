@@ -1,4 +1,4 @@
-baseURL = 'https://f3d4r.github.io/resume_final/' # Указывает базовый URL сайта, от которого будут строиться все относительные пути, Hugo использует это значение при генерации ссылок и путей к стилям, скриптам, изображениям
-languageCode = 'en-us'
-title = 'Hugo Site' 
-theme = 'hugo-resume'
+baseURL = "https://f3d4r.github.io/resume_final/" # Указывает базовый URL сайта, от которого будут строиться все относительные пути, Hugo использует это значение при генерации ссылок и путей к стилям, скриптам, изображениям
+languageCode = "en-us"
+title = "Hugo Site" 
+theme = "hugo-resume"
