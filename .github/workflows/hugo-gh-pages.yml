@@ -19,7 +19,7 @@ jobs:
           extended: true
 
       - name: Build site 
-        run: hugo --minify #  Сжимает HTML/CSS/JS
+        run: hugo --minify --baseURL "https://f3d4r.github.io/resume_final/" #  Сжимает HTML/CSS/JS
 
       - name: Add .nojekyll # Отключает Jekyll на GitHub Pages
         run: touch public/.nojekyll
